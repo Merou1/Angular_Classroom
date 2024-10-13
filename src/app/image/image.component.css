@@ -1,0 +1,14 @@
+.user {
+    height: 170px;
+    width: 170px;
+
+
+}
+.imgdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    height: 100%;
+    margin-top: 40px;
+}

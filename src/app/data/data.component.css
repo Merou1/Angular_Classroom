@@ -1,0 +1,31 @@
+.datadiv {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.datadiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/uemf-removebg-preview.png'); /* Your background image */
+    background-size: contain;
+    background-position-y: bottom;
+    background-repeat: no-repeat; 
+    opacity: 0.2;
+    z-index: 0; 
+}
+
+.datadiv .content {
+    position: relative; 
+    z-index: 1; 
+}
+
+h5 {
+    color: plum;
+}
+p {
+    margin-left: 8px;
+}
