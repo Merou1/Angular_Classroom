@@ -6,14 +6,40 @@
   <title>Document</title>
 </head>
 <body>
+  <form (ngSubmit)="onSubmit()" class="student-form">
+    <div class="form-group">
+      <label for="establishment">Establishment:</label>
+      <input type="text" id="establishment" [(ngModel)]="establishment" name="establishment" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="registrationNumber">Registration Number:</label>
+      <input type="text" id="registrationNumber" [(ngModel)]="registrationNumber" name="registrationNumber" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="rib">RIB:</label>
+      <input type="text" id="rib" [(ngModel)]="rib" name="rib" required>
+    </div>
+  
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+  
+  
   <div class="carteEtud">
     <div class="header">
       <app-header></app-header>
     </div>
     <div class="imgAndData">
       <app-image class="image"></app-image>
-      <app-data class="data"></app-data>
-    </div>
+      <app-data class="data" [personne]="personne"></app-data>    </div> <!--data compnent derna fih
+      personne w hadiq personne affectena liha personne dyal app component
+      -->
 
   </div>
 </body>

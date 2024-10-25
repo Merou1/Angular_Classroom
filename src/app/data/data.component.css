@@ -1,6 +1,14 @@
 .datadiv {
     position: relative; /* Ensure positioning for the pseudo-element */
     overflow: hidden; /* Prevent content overflow */
+    
+        width: 400px; /* Ensure it takes full width of its container */
+        max-width: 600px; /* Optional: set a maximum width to avoid being too large */
+        margin: 0 auto; /* Center it horizontally if necessary */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width */
+        height: 335px;
+        margin-bottom: 60px;
+      
 }
 
 .datadiv::before {

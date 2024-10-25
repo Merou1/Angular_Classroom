@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Personne } from '../classes/personne'; 
+
 
 @Component({
   selector: 'app-data',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
+  @Input() personne: Personne | null = null;
+
 
   constructor() { }
 
