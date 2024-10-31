@@ -6,8 +6,9 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="imgdiv">
-    <img class="user" src="assets/user.png" alt="">
+  <div  *ngIf="imageUrl">
+    <img [src]="imageUrl" alt="Uploaded Image" class="user-image"  />
   </div>
+  
 </body>
 </html>

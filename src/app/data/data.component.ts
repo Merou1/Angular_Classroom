@@ -8,7 +8,7 @@ import { Personne } from '../classes/personne';
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
-  @Input() personne: Personne | null = null;
+  @Input() personne: Personne | null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
 
 
   constructor() { }

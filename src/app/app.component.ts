@@ -16,8 +16,23 @@ export class AppComponent {
   fullName: string = '';
   registrationNumber: number | null = null;
   rib: number | null = null;
+  imageUrl: string | ArrayBuffer | null = null;
 
-  //rwo way data binding on a déclaré les vars empty mais une fois kan3emrou shy input katji dik lvalue t7et flvar li mbinde meah
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input && input.files ? input.files[0] : null;
+        if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imageUrl = reader.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+  
+
+  //two way data binding on a déclaré les vars empty mais une fois kan3emrou shy input katji dik lvalue t7et flvar li mbinde meah
   onSubmit() {
     this.personne = new Personne(
       this.establishment,

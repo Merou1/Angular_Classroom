@@ -26,6 +26,10 @@
       <label for="rib">RIB:</label>
       <input type="text" id="rib" [(ngModel)]="rib" name="rib" required>
     </div>
+    <div class="form-group">
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" (change)="onFileSelected($event)" />
+    </div>
   
     <button type="submit" class="submit-btn">Submit</button>
   </form>
@@ -36,7 +40,7 @@
       <app-header></app-header>
     </div>
     <div class="imgAndData">
-      <app-image class="image"></app-image>
+      <app-image class="image" [imageUrl]="imageUrl"></app-image>
       <app-data class="data" [personne]="personne"></app-data>    </div> <!--data compnent derna fih
       personne w hadiq personne affectena liha personne dyal app component
       -->

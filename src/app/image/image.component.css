@@ -12,3 +12,12 @@
     height: 100%;
     margin-top: 40px;
 }
+
+.user-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  

@@ -4,7 +4,9 @@ export class Personne {
       private _etablissement: string,
       private _fullName: string,
       private _registrationNum: number,
-      private _rib: number
+      private _rib: number,
+      public image?: string 
+
     ) {}
   
     get etablissement(): string {
