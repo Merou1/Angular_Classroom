@@ -12,7 +12,7 @@ import { DataComponent } from './data/data.component';
     AppComponent,
     HeaderComponent,
     ImageComponent,
-    DataComponent
+    DataComponent,
   ],
   imports: [
     BrowserModule,

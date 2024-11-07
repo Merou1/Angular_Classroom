@@ -5,7 +5,7 @@ export class Personne {
       private _fullName: string,
       private _registrationNum: number,
       private _rib: number,
-      public image?: string 
+      private _imageUrl: string ,
 
     ) {}
   
@@ -23,6 +23,9 @@ export class Personne {
   
     get rib(): number {
       return this._rib;
+    }
+    get imageUrl(): string {
+      return this._imageUrl;
     }
   }
   

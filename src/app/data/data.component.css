@@ -1,14 +1,12 @@
 .datadiv {
-    position: relative; /* Ensure positioning for the pseudo-element */
-    overflow: hidden; /* Prevent content overflow */
-    
-        width: 400px; /* Ensure it takes full width of its container */
-        max-width: 600px; /* Optional: set a maximum width to avoid being too large */
-        margin: 0 auto; /* Center it horizontally if necessary */
-        box-sizing: border-box; /* Ensure padding is included in the element's total width */
-        height: 335px;
-        margin-bottom: 60px;
-      
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 460px;
+    height: 250px;
+    overflow: visible; /* Change to allow all content to be visible */
+    display: block; /* Ensure each datadiv is displayed */
 }
 
 .datadiv::before {
@@ -18,22 +16,27 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../../assets/uemf-removebg-preview.png'); /* Your background image */
+    background-image: url('../../assets/uemf-removebg-preview.png');
     background-size: contain;
-    background-position-y: bottom;
-    background-repeat: no-repeat; 
-    opacity: 0.2;
-    z-index: 0; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    z-index: 0;
+
 }
 
 .datadiv .content {
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 h5 {
-    color: plum;
+    color: #007bff;
+    font-weight: bold;
+    margin: 10px 0 5px;
 }
+
 p {
     margin-left: 8px;
+    color: #333;
 }

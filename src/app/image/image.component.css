@@ -1,23 +1,6 @@
-.user {
-    height: 170px;
-    width: 170px;
-
-
-}
-.imgdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    height: 100%;
-    margin-top: 40px;
-}
-
 .user-image {
     width: 150px;
-    height: auto;
+    height: 250px;
     border-radius: 8px;
-    margin-top: 10px;
-    text-align: center;
-  }
-  
+    object-fit: contain;
+}

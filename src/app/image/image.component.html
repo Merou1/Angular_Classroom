@@ -6,9 +6,9 @@
   <title>Document</title>
 </head>
 <body>
-  <div  *ngIf="imageUrl">
-    <img [src]="imageUrl" alt="Uploaded Image" class="user-image"  />
+  <div  *ngFor="let personne of studentDisplay">
+    <img [src]="personne.imageUrl" alt="Uploaded Image" class="user-image"  />
   </div>
-  
+
 </body>
 </html>

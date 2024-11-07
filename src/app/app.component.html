@@ -6,45 +6,68 @@
   <title>Document</title>
 </head>
 <body>
-  <form (ngSubmit)="onSubmit()" class="student-form">
-    <div class="form-group">
-      <label for="establishment">Establishment:</label>
-      <input type="text" id="establishment" [(ngModel)]="establishment" name="establishment" required>
+
+  <div class="formAndCard">
+    <div class="first">
+    <div *ngIf="!showForm && !showCard">
+      <button (click)="showEstablishmentList()">Add Establishment</button>
+      <button (click)="showStudentForm()">Add Student</button>
+      <button (click)="generateCard()">Generate Card</button>
     </div>
-  
-    <div class="form-group">
-      <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+
+    <div class="selectetab" *ngIf="showEstablishmentList">
+      <h3 style="color: rgb(50, 96, 156);">Select Establishment</h3>
+      <select [(ngModel)]="selectedEstablishment">
+        <option *ngFor="let establishment of establishments" [value]="establishment">
+          {{ establishment }}
+        </option>
+      </select>
+      <button (click)="confirmEstablishment()">Confirm</button>
     </div>
-  
-    <div class="form-group">
-      <label for="registrationNumber">Registration Number:</label>
-      <input type="text" id="registrationNumber" [(ngModel)]="registrationNumber" name="registrationNumber" required>
+
+    <form *ngIf="showForm" (ngSubmit)="onSubmit()" class="student-form">
+      <div class="form-group">
+        <label for="establishment">Establishment:</label>
+        <input type="text" id="establishment" [(ngModel)]="establishment" name="establishment" required readonly>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+      </div>
+      <div class="form-group">
+        <label for="registrationNumber">Registration Number:</label>
+        <input type="text" id="registrationNumber" [(ngModel)]="registrationNumber" name="registrationNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="rib">RIB:</label>
+        <input type="text" id="rib" [(ngModel)]="rib" name="rib" required>
+      </div>
+      <div class="buttons">
+      <div class="form-group">
+        <label class="file-upload-button" for="image">Upload Image</label>
+        <input style="display: none;"  type="file" id="image" (change)="onFileSelected($event)" />
+      </div>
+      <button type="button" (click)="onSaveStudent()" class="suivant-btn">Save Student</button>
+      <button type="submit" class="submit-btn">Submit</button>
     </div>
-  
-    <div class="form-group">
-      <label for="rib">RIB:</label>
-      <input type="text" id="rib" [(ngModel)]="rib" name="rib" required>
+    </form>
+
+    <div *ngIf="showCard" class="carteEtud">
+      <div class="header">
+        <app-header></app-header>
+      </div>
+      <div class="imgAndData">
+        <div class="image-container">
+          <app-image class="image" [studentDisplay]="studentDisplay" [imageUrl]="imageUrl"></app-image>
+        </div>
+        <div class="data-container">
+          <app-data class="data" [studentDisplay]="studentDisplay"></app-data>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="image">Upload Image:</label>
-      <input type="file" id="image" (change)="onFileSelected($event)" />
-    </div>
-  
-    <button type="submit" class="submit-btn">Submit</button>
-  </form>
-  
-  
-  <div class="carteEtud">
-    <div class="header">
-      <app-header></app-header>
-    </div>
-    <div class="imgAndData">
-      <app-image class="image" [imageUrl]="imageUrl"></app-image>
-      <app-data class="data" [personne]="personne"></app-data>    </div> <!--data compnent derna fih
-      personne w hadiq personne affectena liha personne dyal app component
-      -->
 
   </div>
+</div>
+  
 </body>
 </html>

@@ -11,6 +11,8 @@ export class ImageComponent implements OnInit {
   @Input() personne: Personne | null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
 
   @Input() imageUrl: string | ArrayBuffer | null = null;
+  @Input() studentDisplay: Personne []| null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
+  
 
   constructor() { }
 

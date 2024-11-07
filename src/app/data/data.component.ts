@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
 import { Personne } from '../classes/personne'; 
+import { HeaderComponent } from '../header/header.component';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Personne } from '../classes/personne';
 })
 export class DataComponent implements OnInit {
   @Input() personne: Personne | null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
+  @Input() studentDisplay: Personne []| null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
 
 
   constructor() { }

@@ -1,30 +1,46 @@
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-right: 70px;
+    margin-top: 15%;
+    margin-left: 10%;
 }
-.carteEtud {
-    margin-top: 2%;
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    height: 470px;
-    border: 1px solid lightgray;
+body ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/uimage2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;       
 }
-.imgAndData {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.formAndCard{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 70px;
+  margin-top: 40px;
+
 }
+
 .image {
     display: flex;
     height: 100%;
+    justify-content: center;
+    align-items: center;
     
 }
 .data{
     margin-bottom: 20px;
+
 }
 /* Form styling */
 .student-form {
@@ -105,3 +121,143 @@ body {
     }
   }
   
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.carteEtud {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+}
+
+.header {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.imgAndData {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px; /* Adjusts the spacing between items in the cross-axis */
+
+}
+
+.image-container {
+}
+
+.data-container {
+    flex: 1;
+    
+}
+.buttons {
+  display: flex;
+}
+.suivant-btn {
+  height: 45px;
+  width: 120px;
+  margin-top: 5px;
+}
+
+/* Styles for the initial buttons */
+.formAndCard button {
+  padding: 20px;
+  margin: 10px;
+  background-color: #2e902d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  width: 250px;
+}
+.file-upload-button {
+  padding: 20px;
+  margin: 10px;
+  background-color: #2e902d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+} 
+
+
+/* Styles for the establishment list section */
+.select-establishment {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.select-establishment h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.select-establishment select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.select-establishment select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.select-establishment button {
+  width: 100%;
+  padding: 10px;
+  background-color: #47de44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-establishment button:hover {
+  background-color: #0056b3;
+}
+.selectetab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

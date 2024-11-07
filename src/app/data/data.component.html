@@ -1,8 +1,8 @@
-<!-- data.component.html -->
-<div class="datadiv" *ngIf="personne"> <!--ng if hiya if condition matbeyen had datadiv div ta tkun var objet fiha data makhawyash-->
+<div *ngIf="studentDisplay && studentDisplay.length > 0"> <!--ng if hiya if condition matbeyen had datadiv div ta tkun var objet fiha data makhawyash-->
+  <div class="datadiv" *ngFor="let personne of studentDisplay">
   <h5>Establishment | Etablissement</h5>
   <p>{{ personne.etablissement }}</p>
-
+    
   <h5>Full name | Nom et Prénom</h5>
   <p>{{ personne.fullName }}</p>
 
@@ -11,7 +11,10 @@
 
   <h5>Personal bank detail | RIB Personnel</h5>
   <p>{{ personne.rib }}</p>
+
+</div>
 </div>
 
-<!-- Show a message if no data is present -->
-<p *ngIf="!personne">Please submit the form to display student data.</p>
+<p *ngIf="!studentDisplay && !studentDisplay.length > 0">Please submit the form to display student data.</p>
+
+  
