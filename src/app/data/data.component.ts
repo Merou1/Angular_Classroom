@@ -10,7 +10,7 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class DataComponent implements OnInit {
   @Input() personne: Personne | null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
-  @Input() studentDisplay: Personne []| null = null; //input hiya rah ayji var personne de type Personne men lparent li hua app
+  @Input() studentDisplay: Personne []| null = null; 
 
 
   constructor() { }
